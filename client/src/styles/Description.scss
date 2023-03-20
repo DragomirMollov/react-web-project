@@ -1,0 +1,26 @@
+@import '../styles/variables.scss';
+
+/* ------------------------------------------------------------ *\
+	Description
+\* ------------------------------------------------------------ */
+
+.description {
+    .material-icons {
+        font-size: 18px;
+        margin-right: 5px;
+    }
+    .list-links {
+        & {
+            list-style: none;
+        }
+        li .btn {
+            display: flex;
+            align-items: center;
+            color: $white;
+            font-size: 14px;
+        }
+        li ~ li  {
+            margin-left: 10px;
+        }
+    }
+}
