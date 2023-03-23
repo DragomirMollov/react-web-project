@@ -1,40 +1,7 @@
-// import { createContext, useState } from "react";
-
-// const PostContext = createContext();
-
-// const PostProvider = (props) => {
-//   const [posts, setPosts] = useState([]);
-//   const [noResults, setNoResults] = useState(false);
-//   const items = [
-//     { name: "House & DIY", icon: "home" },
-//     { name: "Animals", icon: "pets" },
-//     { name: "Electronics", icon: "phonelink" },
-//     { name: "Sports & Hobbies", icon: "accessibility_new" },
-//     { name: "Clothes & Lifestyle", icon: "face" },
-//     { name: "Farming", icon: "spa" },
-//     { name: "Baby & Kinds", icon: "child_care" },
-//     { name: "Cars & Motor", icon: "drive_eta" },
-//     { name: "Business", icon: "business" },
-//     { name: "Holidays & Tickets", icon: "beach_access" },
-//     { name: "Lost & Found", icon: "sentiment_dissatisfied" },
-//     { name: "Music & Education", icon: "music_note" },
-//     { name: "Other", icon: "more" },
-//     { name: "Property", icon: "store" },
-//     { name: "Work", icon: "work" },
-//   ];
-
-//   const value = { posts, setPosts, noResults, setNoResults, items };
-
-//   return (
-//     <PostContext.Provider value={value}>{props.children}</PostContext.Provider>
-//   );
-// };
-
-// export { PostContext, PostProvider };
-
+import { Context } from "./Context";
 import {  useState } from "react";
 
-export const PostContext = (props) => {
+export const PostDetails = () => {
   const items = [
     { name: "House & DIY", categoryName: "houseanddiy", icon: "home" },
     { name: "Animals", categoryName: "animals", icon: "pets" },
@@ -87,7 +54,7 @@ export const PostContext = (props) => {
 //   return 
 const value = {
     posts,
-    isLoading,
+    isLoading, 
     sort,
     listView,
     currentTitle,
@@ -101,11 +68,7 @@ const value = {
     setCounterPosts,
   };
 
-  return (
-        <PostContext.Provider value={value}>
-            {props.children}
-        </PostContext.Provider>
-      );
+  return (value);
 
 };
 

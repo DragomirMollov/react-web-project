@@ -8,8 +8,8 @@ import { Context } from './contexts/Context';
 import { Navigation } from "./components/Navigation";
 import { Footer } from "./components/Footer";
 import { About } from './components/About';
-//import { Main } from './components/Main';
-import { MainNew } from './components/MainNew';
+import { Main } from './components/Main';
+//import { MainNew } from './components/MainNew';
 
 function App() {
   //const navigate = useNavigate();
@@ -21,7 +21,7 @@ function App() {
                     <Navigation />
                         <main className='main'>
                             <Routes>
-                                <Route path='/' element = { <MainNew /> }/>
+                                <Route path='/' element = { <Main /> }/>
                                 <Route path='/about' element = { <About /> }/>
                             </Routes>
                         </main>
